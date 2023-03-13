@@ -1,3 +1,5 @@
 rasterio
 numpy
 jupyter
+pyproj
+matplotlib
