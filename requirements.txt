@@ -3,3 +3,4 @@ numpy
 jupyter
 pyproj
 matplotlib
+Latlon # to work with lat/lon extensions
