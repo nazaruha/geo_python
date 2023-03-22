@@ -4,3 +4,6 @@ jupyter
 pyproj
 matplotlib
 Latlon # to work with lat/lon extensions
+geopandas
+shapely
+seaborn
