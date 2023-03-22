@@ -164,3 +164,6 @@ cython_debug/
 
 # geo photos
 geo_photo_1.qgz
+
+#
+*.geojson
