@@ -167,3 +167,7 @@ geo_photo_1.qgz
 
 #
 *.geojson
+
+#png
+yield_vs_rainfall.png
+yield_vs_temperature.png
