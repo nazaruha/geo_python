@@ -5,6 +5,7 @@ pyproj
 matplotlib
 Latlon # to work with lat/lon extensions
 geopandas
+geojson
 shapely
 seaborn
 xarray
