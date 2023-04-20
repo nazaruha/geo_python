@@ -167,6 +167,7 @@ geo_photo_1.qgz
 
 #
 *.geojson
+*.tif
 
 #png
 yield_vs_rainfall.png
