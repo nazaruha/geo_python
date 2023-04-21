@@ -1,4 +1,6 @@
 from flask import Flask, jsonify  # Flask - локальний сервер
+import geopandas as gpd
+from shapely.geometry import Point, mapping
 
 app = Flask(__name__)
 
@@ -16,6 +18,22 @@ def get_json(filename):
             return jsonify(json_data)
     except FileNotFoundError:
         return jsonify({'error': 'File not found'})
+
+
+@app.route("/field/<string:filename>", methods=['GET'])
+def get_field_json(filename):
+    try:
+        path = "../Lab_06/centroids/updated_field_centroids.geojson"
+        gdf = gpd.read_file(path)
+        for i, row in gdf.iterrows():
+            if row["name"] == filename:
+                print("Good")
+                row_df = row.to_frame().T
+                # return jsonify(row.__geo_interface__)
+                return row_df.to_json()
+        return jsonify({'sorry': 'We couldn\'t find this file'})
+    except FileNotFoundError:
+        return jsonify({'error': 'File not found :('})
 
 
 @app.errorhandler(404)  # page doesn't exists
